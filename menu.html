@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Меню — Mister Boom, Пловдив</title>
+  <meta name="description" content="Менюто на Mister Boom, ул. „Гладстон“ 62, Пловдив: бургери с имена на планети, пилешки и вегетариански, Dirty Fries, комбо менюта, шейкове и напитки." />
+  <meta name="theme-color" content="#090909" />
+  <link rel="icon" type="image/png" href="assets/img/favicon-64.png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261110n" />
+  <link rel="stylesheet" href="assets/css/menu.css?v=20261110n" />
+</head>
+<body class="page-menu">
+  <a class="skip-link" href="#products">Към менюто</a>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="burst" viewBox="0 0 100 100">
+      <path d="M50 2l9.5 28.5L86 15.5 71 42l27 8-27 8 15 26.5-26.5-15L50 98l-9.5-28.5L14 84.5 29 58 2 50l27-8-15-26.5 26.5 15z" />
+    </symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M5 8h14l-1 13H6L5 8Zm3 0V6a4 4 0 0 1 8 0v2" /></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M5 5l14 14M19 5L5 19" /></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 4v16M4 12h16" /></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M4 12h16" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" d="M4.5 12.5l5 5L19.5 7" /></symbol>
+  </svg>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav is-scrolled" data-nav>
+    <span class="nav__progress" aria-hidden="true" data-progress></span>
+    <div class="nav__inner">
+      <a class="logo" href="index.html#nachalo" aria-label="Mister Boom — начало">
+        <img class="logo__img" src="assets/img/logo-mr-boom-200.webp" width="97" height="96" decoding="async" alt="Mr. Boom" />
+      </a>
+
+      <nav class="nav__links" aria-label="Основна навигация">
+        <a href="index.html#nachalo"><span class="nav__idx">01</span>Начало</a>
+        <a href="index.html#planetite"><span class="nav__idx">02</span>Планетите</a>
+        <a href="menu.html" aria-current="page"><span class="nav__idx">03</span>Меню</a>
+        <a href="index.html#otzivi"><span class="nav__idx">04</span>Отзиви</a>
+        <a href="index.html#kontakti"><span class="nav__idx">05</span>Контакти</a>
+      </nav>
+
+      <div class="nav__right">
+        <span class="status" data-status hidden><i></i><span data-status-text></span></span>
+        <button class="cart-btn" type="button" data-cart-open aria-label="Отвори количката">
+          <svg aria-hidden="true"><use href="#i-bag" /></svg>
+          <span class="cart-btn__label">Количка</span>
+          <span class="cart-btn__count" data-cart-count>0</span>
+        </button>
+        <button class="nav__toggle" aria-label="Отвори менюто" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
+    <nav class="mobile-menu__links" aria-label="Мобилна навигация">
+      <a href="index.html#nachalo"><span>01</span>Начало</a>
+      <a href="index.html#planetite"><span>02</span>Планетите</a>
+      <a href="menu.html"><span>03</span>Меню</a>
+      <a href="index.html#otzivi"><span>04</span>Отзиви</a>
+      <a href="index.html#kontakti"><span>05</span>Контакти</a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <p class="mono"><span data-biz="address.street">ул. „Гладстон“ 62</span> · <a href="tel:+359877226252" data-biz-tel data-biz="phone.display">087 722 6252</a></p>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- ============ MENU HERO ============ -->
+    <section class="mhero">
+      <div class="container mhero__inner">
+        <div class="mhero__top">
+          <p class="label"><span>(Меню)</span> Брой 01 — Поръчай онлайн</p>
+          <p class="mono mhero__notice" data-notice hidden></p>
+        </div>
+        <h1 class="mhero__title">Меню<span class="outline">то</span></h1>
+        <div class="mhero__row">
+          <p class="mhero__lead">Осем бургера, кръстени на планети, пилешки и вегетариански, Dirty Fries, комбо менюта и шейкове. Натисни продукт, за да видиш какво има вътре.</p>
+          <ul class="mhero__facts mono">
+            <li><span>★ 4,4</span> в Google</li>
+            <li><span>5–10 €</span> на човек</li>
+            <li><span>Гладстон 62</span> Пловдив</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CATEGORY BAR ============ -->
+    <div class="catbar" data-catbar>
+      <div class="container catbar__inner">
+        <nav class="catbar__list" aria-label="Категории в менюто" data-catbar-list></nav>
+      </div>
+    </div>
+
+    <!-- ============ PRODUCTS ============ -->
+    <div id="products" class="container products" data-products></div>
+
+    <section class="container menu-end">
+      <div class="menu-end__inner">
+        <svg aria-hidden="true"><use href="#burst" /></svg>
+        <p>Въпрос за съставките или алергени? Обади се на <a class="menu-end__tel" href="tel:+359877226252" data-biz-tel data-biz="phone.display">087 722 6252</a>, преди да поръчаш.</p>
+        <a class="link-line" href="index.html#kontakti">Адрес и карта</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer footer--compact">
+    <div class="container">
+      <div class="footer__bottom mono">
+        <span>© <span data-year>2026</span> Mister Boom. Всички права запазени.</span>
+        <span class="hide-sm">ул. „Гладстон“ 62, Пловдив · 087 722 6252</span>
+        <a href="index.html">Към началото ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ PRODUCT DIALOG ============ -->
+  <dialog class="pd" data-pd aria-labelledby="pd-name">
+    <div class="pd__shell">
+      <button class="pd__close" type="button" aria-label="Затвори" data-pd-close>
+        <svg aria-hidden="true"><use href="#i-close" /></svg>
+      </button>
+
+      <div class="pd__media" data-pd-media></div>
+
+      <div class="pd__body">
+        <div class="pd__scroll" data-pd-scroll>
+          <header class="pd__head">
+            <div class="pd__tags" data-pd-tags></div>
+            <h2 class="pd__name" id="pd-name" data-pd-name></h2>
+            <p class="pd__base mono" data-pd-base></p>
+            <p class="pd__desc" data-pd-desc></p>
+          </header>
+
+          <section class="pd__section">
+            <h3 class="pd__h mono">Какво има вътре</h3>
+            <ul class="pd__ingredients" data-pd-ingredients></ul>
+          </section>
+
+          <div data-pd-groups></div>
+        </div>
+
+        <footer class="pd__foot">
+          <p class="pd__summary" data-pd-summary aria-live="polite"></p>
+          <div class="pd__actions">
+            <div class="qty" role="group" aria-label="Количество">
+              <button type="button" class="qty__btn" data-qty="-1" aria-label="Намали количеството"><svg aria-hidden="true"><use href="#i-minus" /></svg></button>
+              <output class="qty__val" data-pd-qty aria-live="polite">1</output>
+              <button type="button" class="qty__btn" data-qty="1" aria-label="Увеличи количеството"><svg aria-hidden="true"><use href="#i-plus" /></svg></button>
+            </div>
+            <button type="button" class="btn btn--red pd__add" data-pd-add>
+              <span>Добави в количката</span>
+              <span class="pd__add-total" data-pd-total>0,00 €</span>
+            </button>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ============ CART DRAWER ============ -->
+  <dialog class="cart" data-cart aria-labelledby="cart-title">
+    <div class="cart__shell">
+      <header class="cart__head">
+        <h2 id="cart-title" class="cart__title">Количка <sup data-cart-count>0</sup></h2>
+        <div class="cart__head-actions">
+          <button class="cart__clear" type="button" data-cart-clear hidden>Изчисти</button>
+          <button class="pd__close cart__close" type="button" data-cart-close aria-label="Затвори количката">
+            <svg aria-hidden="true"><use href="#i-close" /></svg>
+          </button>
+        </div>
+      </header>
+      <div class="cart__body" data-cart-body></div>
+      <footer class="cart__foot" data-cart-foot>
+        <div class="seg" role="radiogroup" aria-label="Начин на получаване">
+          <button type="button" role="radio" aria-checked="true" data-mode="delivery">
+            <span>Доставка</span><small data-mode-meta="delivery"></small>
+          </button>
+          <button type="button" role="radio" aria-checked="false" data-mode="pickup">
+            <span>Вземане</span><small>Безплатно</small>
+          </button>
+        </div>
+        <div class="freebar" data-freebar>
+          <p data-freebar-text></p>
+          <span class="freebar__track" aria-hidden="true"><i data-freebar-fill></i></span>
+        </div>
+        <dl class="sums">
+          <div><dt>Междинна сума</dt><dd data-sum-sub>0,00 €</dd></div>
+          <div><dt data-sum-fee-label>Доставка</dt><dd data-sum-fee>—</dd></div>
+          <div class="sums__total"><dt data-sum-total-label>Общо</dt><dd data-sum-total>0,00 €</dd></div>
+        </dl>
+        <p class="cart__warn" data-min-warn role="status" hidden></p>
+        <a class="btn btn--red btn--block btn--lg" href="checkout.html" data-checkout>Към поръчката <span class="btn__arrow" aria-hidden="true">→</span></a>
+        <p class="mono cart__note"><span><span class="demo-dot"></span>Демо режим</span><span data-eta-wrap>Готова за <span data-cart-eta></span></span></p>
+      </footer>
+    </div>
+  </dialog>
+
+  <!-- Floating mobile cart bar -->
+  <button class="cartbar" type="button" data-cart-open data-cartbar hidden>
+    <span class="cartbar__count" data-cart-count>0</span>
+    <span class="cartbar__label">Виж количката</span>
+    <span class="cartbar__total" data-cart-total>0,00 €</span>
+  </button>
+
+  <!-- Toast -->
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="assets/js/business-data.js?v=20261110n" defer></script>
+  <script src="assets/js/main.js?v=20261110n" defer></script>
+  <script src="assets/js/menu-data.js?v=20261110n" defer></script>
+  <script src="assets/js/shop.js?v=20261110n" defer></script>
+  <script src="assets/js/menu.js?v=20261110n" defer></script>
+</body>
+</html>
